@@ -35,6 +35,7 @@ public class ProductController {
     public ResponseEntity<List<ProductModel>> getAllProducts(){
         return ResponseEntity.status(HttpStatus.OK).body(productRepository.findAll());
     }
+    
 
     @GetMapping("/products/{id}")
     public ResponseEntity<Object> getOnePorduct(@PathVariable(value="id")UUID id) {
